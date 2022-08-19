@@ -1,0 +1,588 @@
+[gd_scene load_steps=64 format=2]
+
+[ext_resource path="res://Player/char sprate.png" type="Texture" id=1]
+[ext_resource path="res://Player/player.gd" type="Script" id=2]
+[ext_resource path="res://LightShadow_pipo.png" type="Texture" id=3]
+
+[sub_resource type="TileSet" id=1]
+0/name = "LightShadow_pipo.png 0"
+0/texture = ExtResource( 3 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 64, 0, 64, 64 )
+0/tile_mode = 2
+0/autotile/icon_coordinate = Vector2( 0, 0 )
+0/autotile/tile_size = Vector2( 16, 32 )
+0/autotile/spacing = 0
+0/autotile/occluder_map = [  ]
+0/autotile/navpoly_map = [  ]
+0/autotile/priority_map = [  ]
+0/autotile/z_index_map = [  ]
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shape_offset = Vector2( 0, 0 )
+0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape_one_way = false
+0/shape_one_way_margin = 0.0
+0/shapes = [  ]
+0/z_index = 0
+1/name = "LightShadow_pipo.png 1"
+1/texture = ExtResource( 3 )
+1/tex_offset = Vector2( 0, 0 )
+1/modulate = Color( 1, 1, 1, 1 )
+1/region = Rect2( 96, 96, 64, 32 )
+1/tile_mode = 2
+1/autotile/icon_coordinate = Vector2( 0, 0 )
+1/autotile/tile_size = Vector2( 32, 32 )
+1/autotile/spacing = 0
+1/autotile/occluder_map = [  ]
+1/autotile/navpoly_map = [  ]
+1/autotile/priority_map = [  ]
+1/autotile/z_index_map = [  ]
+1/occluder_offset = Vector2( 0, 0 )
+1/navigation_offset = Vector2( 0, 0 )
+1/shape_offset = Vector2( 0, 0 )
+1/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+1/shape_one_way = false
+1/shape_one_way_margin = 0.0
+1/shapes = [  ]
+1/z_index = 0
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 26.0414, 18.9502 )
+
+[sub_resource type="Animation" id=3]
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("char sprate:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 11 ]
+}
+
+[sub_resource type="Animation" id=4]
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("char sprate:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 0 ]
+}
+
+[sub_resource type="Animation" id=5]
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("char sprate:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 22 ]
+}
+
+[sub_resource type="Animation" id=6]
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("char sprate:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 33 ]
+}
+
+[sub_resource type="Animation" id=7]
+length = 0.4
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("char sprate:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 12, 13, 14, 15 ]
+}
+
+[sub_resource type="Animation" id=8]
+length = 0.4
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("char sprate:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 1, 2, 3, 4 ]
+}
+
+[sub_resource type="Animation" id=9]
+length = 0.4
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("char sprate:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 23, 24, 25, 26 ]
+}
+
+[sub_resource type="Animation" id=10]
+length = 0.4
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("char sprate:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 34, 35, 36, 37 ]
+}
+
+[sub_resource type="Animation" id=11]
+resource_name = "mati_atas"
+tracks/0/type = "value"
+tracks/0/path = NodePath("char sprate:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 21 ]
+}
+
+[sub_resource type="Animation" id=12]
+resource_name = "mati_bawah"
+tracks/0/type = "value"
+tracks/0/path = NodePath("char sprate:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 10 ]
+}
+
+[sub_resource type="Animation" id=13]
+resource_name = "mati_kanan"
+tracks/0/type = "value"
+tracks/0/path = NodePath("char sprate:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 32 ]
+}
+
+[sub_resource type="Animation" id=14]
+resource_name = "mati_kiri"
+tracks/0/type = "value"
+tracks/0/path = NodePath("char sprate:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 43 ]
+}
+
+[sub_resource type="Animation" id=15]
+resource_name = "player_hit_atas"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/path = NodePath("char sprate:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ 21, 11 ]
+}
+
+[sub_resource type="Animation" id=16]
+resource_name = "player_hit_bawah"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/path = NodePath("char sprate:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ 10, 0 ]
+}
+
+[sub_resource type="Animation" id=17]
+resource_name = "player_hit_kanan"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/path = NodePath("char sprate:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ 32, 22 ]
+}
+
+[sub_resource type="Animation" id=18]
+resource_name = "player_hit_kiri"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/path = NodePath("char sprate:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ 43, 33 ]
+}
+
+[sub_resource type="Animation" id=19]
+tracks/0/type = "value"
+tracks/0/path = NodePath("char sprate:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 16 ]
+}
+
+[sub_resource type="Animation" id=20]
+tracks/0/type = "value"
+tracks/0/path = NodePath("char sprate:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 5 ]
+}
+
+[sub_resource type="Animation" id=21]
+tracks/0/type = "value"
+tracks/0/path = NodePath("char sprate:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 27 ]
+}
+
+[sub_resource type="Animation" id=22]
+tracks/0/type = "value"
+tracks/0/path = NodePath("char sprate:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 38 ]
+}
+
+[sub_resource type="AnimationNodeAnimation" id=23]
+animation = "player_hit_kiri"
+
+[sub_resource type="AnimationNodeAnimation" id=24]
+animation = "player_hit_kanan"
+
+[sub_resource type="AnimationNodeAnimation" id=25]
+animation = "player_hit_bawah"
+
+[sub_resource type="AnimationNodeAnimation" id=26]
+animation = "player_hit_atas"
+
+[sub_resource type="AnimationNodeBlendSpace2D" id=27]
+blend_point_0/node = SubResource( 23 )
+blend_point_0/pos = Vector2( -1, 0 )
+blend_point_1/node = SubResource( 24 )
+blend_point_1/pos = Vector2( 1, 0 )
+blend_point_2/node = SubResource( 25 )
+blend_point_2/pos = Vector2( 0, 1 )
+blend_point_3/node = SubResource( 26 )
+blend_point_3/pos = Vector2( 0, -1 )
+blend_mode = 1
+
+[sub_resource type="AnimationNodeAnimation" id=28]
+animation = "idle_kiri"
+
+[sub_resource type="AnimationNodeAnimation" id=29]
+animation = "idle_kanan"
+
+[sub_resource type="AnimationNodeAnimation" id=30]
+animation = "idle_bawah"
+
+[sub_resource type="AnimationNodeAnimation" id=31]
+animation = "idle_atas"
+
+[sub_resource type="AnimationNodeBlendSpace2D" id=32]
+blend_point_0/node = SubResource( 28 )
+blend_point_0/pos = Vector2( -1, 0 )
+blend_point_1/node = SubResource( 29 )
+blend_point_1/pos = Vector2( 1, 0 )
+blend_point_2/node = SubResource( 30 )
+blend_point_2/pos = Vector2( 0, 1 )
+blend_point_3/node = SubResource( 31 )
+blend_point_3/pos = Vector2( 0, -0.9 )
+blend_mode = 1
+
+[sub_resource type="AnimationNodeAnimation" id=33]
+animation = "jalan_kiri"
+
+[sub_resource type="AnimationNodeAnimation" id=34]
+animation = "jalan_kanan"
+
+[sub_resource type="AnimationNodeAnimation" id=35]
+animation = "jalan_bawah"
+
+[sub_resource type="AnimationNodeAnimation" id=36]
+animation = "jalan_atas"
+
+[sub_resource type="AnimationNodeBlendSpace2D" id=37]
+blend_point_0/node = SubResource( 33 )
+blend_point_0/pos = Vector2( -1, 0 )
+blend_point_1/node = SubResource( 34 )
+blend_point_1/pos = Vector2( 1, 0 )
+blend_point_2/node = SubResource( 35 )
+blend_point_2/pos = Vector2( 0, 1.1 )
+blend_point_3/node = SubResource( 36 )
+blend_point_3/pos = Vector2( 0, -1.1 )
+min_space = Vector2( -1, -1.1 )
+max_space = Vector2( 1, 1.1 )
+blend_mode = 1
+
+[sub_resource type="AnimationNodeAnimation" id=38]
+animation = "mati_kiri"
+
+[sub_resource type="AnimationNodeAnimation" id=39]
+animation = "mati_kanan"
+
+[sub_resource type="AnimationNodeAnimation" id=40]
+animation = "mati_bawah"
+
+[sub_resource type="AnimationNodeAnimation" id=41]
+animation = "mati_atas"
+
+[sub_resource type="AnimationNodeBlendSpace2D" id=42]
+blend_point_0/node = SubResource( 38 )
+blend_point_0/pos = Vector2( -1, 0 )
+blend_point_1/node = SubResource( 39 )
+blend_point_1/pos = Vector2( 1, 0 )
+blend_point_2/node = SubResource( 40 )
+blend_point_2/pos = Vector2( 0, 1 )
+blend_point_3/node = SubResource( 41 )
+blend_point_3/pos = Vector2( 0, -1 )
+blend_mode = 1
+
+[sub_resource type="AnimationNodeAnimation" id=43]
+animation = "tembak_kiri"
+
+[sub_resource type="AnimationNodeAnimation" id=44]
+animation = "tembak_kanan"
+
+[sub_resource type="AnimationNodeAnimation" id=45]
+animation = "tembak_bawah"
+
+[sub_resource type="AnimationNodeAnimation" id=46]
+animation = "tembak_atas"
+
+[sub_resource type="AnimationNodeBlendSpace2D" id=47]
+blend_point_0/node = SubResource( 43 )
+blend_point_0/pos = Vector2( -1, 0 )
+blend_point_1/node = SubResource( 44 )
+blend_point_1/pos = Vector2( 1, 0 )
+blend_point_2/node = SubResource( 45 )
+blend_point_2/pos = Vector2( 0, 1 )
+blend_point_3/node = SubResource( 46 )
+blend_point_3/pos = Vector2( 0, -1 )
+blend_mode = 1
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=48]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=49]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=50]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=51]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=52]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=53]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=54]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=55]
+switch_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=56]
+switch_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=57]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=58]
+
+[sub_resource type="AnimationNodeStateMachine" id=59]
+states/hit/node = SubResource( 27 )
+states/hit/position = Vector2( 301.667, -24.6827 )
+states/idle/node = SubResource( 32 )
+states/idle/position = Vector2( 212.333, 65.6667 )
+states/jalan/node = SubResource( 37 )
+states/jalan/position = Vector2( 429.667, 65.6667 )
+states/mati/node = SubResource( 42 )
+states/mati/position = Vector2( 533.667, -19.3494 )
+states/tembak/node = SubResource( 47 )
+states/tembak/position = Vector2( 315, 171 )
+transitions = [ "idle", "jalan", SubResource( 48 ), "jalan", "idle", SubResource( 49 ), "idle", "tembak", SubResource( 50 ), "tembak", "idle", SubResource( 51 ), "tembak", "jalan", SubResource( 52 ), "jalan", "tembak", SubResource( 53 ), "idle", "hit", SubResource( 54 ), "hit", "idle", SubResource( 55 ), "hit", "jalan", SubResource( 56 ), "jalan", "hit", SubResource( 57 ), "hit", "mati", SubResource( 58 ) ]
+start_node = "idle"
+graph_offset = Vector2( 0, -69.016 )
+
+[sub_resource type="AnimationNodeStateMachinePlayback" id=60]
+
+[node name="player" type="KinematicBody2D" groups=[
+"player",
+]]
+scale = Vector2( 0.8, 0.8 )
+collision_layer = 2
+collision_mask = 37
+script = ExtResource( 2 )
+
+[node name="TileMap" type="TileMap" parent="."]
+position = Vector2( 0, -2.121 )
+scale = Vector2( 1.5, 1 )
+tile_set = SubResource( 1 )
+cell_size = Vector2( 16, 16 )
+format = 1
+tile_data = PoolIntArray( 65535, 0, 65536, 0, 0, 65537 )
+
+[node name="char sprate" type="Sprite" parent="."]
+position = Vector2( 0, -22.719 )
+texture = ExtResource( 1 )
+hframes = 11
+vframes = 4
+frame = 22
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." groups=[
+"player",
+]]
+position = Vector2( 0, -11.644 )
+rotation = 1.5708
+shape = SubResource( 2 )
+
+[node name="Senjata" type="Node2D" parent="."]
+position = Vector2( -5.00035, -10.328 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/idle_atas = SubResource( 3 )
+anims/idle_bawah = SubResource( 4 )
+anims/idle_kanan = SubResource( 5 )
+anims/idle_kiri = SubResource( 6 )
+anims/jalan_atas = SubResource( 7 )
+anims/jalan_bawah = SubResource( 8 )
+anims/jalan_kanan = SubResource( 9 )
+anims/jalan_kiri = SubResource( 10 )
+anims/mati_atas = SubResource( 11 )
+anims/mati_bawah = SubResource( 12 )
+anims/mati_kanan = SubResource( 13 )
+anims/mati_kiri = SubResource( 14 )
+anims/player_hit_atas = SubResource( 15 )
+anims/player_hit_bawah = SubResource( 16 )
+anims/player_hit_kanan = SubResource( 17 )
+anims/player_hit_kiri = SubResource( 18 )
+anims/tembak_atas = SubResource( 19 )
+anims/tembak_bawah = SubResource( 20 )
+anims/tembak_kanan = SubResource( 21 )
+anims/tembak_kiri = SubResource( 22 )
+
+[node name="AnimationTree" type="AnimationTree" parent="."]
+tree_root = SubResource( 59 )
+anim_player = NodePath("../AnimationPlayer")
+active = true
+parameters/playback = SubResource( 60 )
+parameters/hit/blend_position = Vector2( -0.0140244, -0.459538 )
+parameters/idle/blend_position = Vector2( 0.192564, 0.00830567 )
+parameters/jalan/blend_position = Vector2( -0.00732809, 0.55 )
+parameters/mati/blend_position = Vector2( -0.272561, -0.0780346 )
+parameters/tembak/blend_position = Vector2( -0.298665, 0.0260116 )
+
+[node name="shoot" type="Timer" parent="."]
+
+[node name="refill" type="Timer" parent="."]
+
+[connection signal="player_hit" from="." to="." method="_player_hit"]
+[connection signal="timeout" from="shoot" to="." method="_shoot_timeout"]
+[connection signal="timeout" from="refill" to="." method="_refill_timeout"]

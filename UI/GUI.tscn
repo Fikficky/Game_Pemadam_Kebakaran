@@ -1,0 +1,598 @@
+[gd_scene load_steps=38 format=2]
+
+[ext_resource path="res://UI/meter_icon_holder_blue.png" type="Texture" id=1]
+[ext_resource path="res://UI/player_logo.png" type="Texture" id=2]
+[ext_resource path="res://UI/HP_Bar.tscn" type="PackedScene" id=3]
+[ext_resource path="res://UI/GUI.gd" type="Script" id=4]
+[ext_resource path="res://UI/Water_Bar.tscn" type="PackedScene" id=5]
+[ext_resource path="res://UI/refill.png" type="Texture" id=6]
+[ext_resource path="res://UI/hidden-danger-icon-with-png-and-vector-format-for-free-unlimited-689118.png" type="Texture" id=7]
+[ext_resource path="res://UI/Layer 1.png" type="Texture" id=8]
+[ext_resource path="res://UI/Layer 1 copy.png" type="Texture" id=9]
+[ext_resource path="res://UI/Layer 1 copy 3.png" type="Texture" id=10]
+[ext_resource path="res://UI/Layer 1 copy 2.png" type="Texture" id=11]
+[ext_resource path="res://UI/pressed_down.png" type="Texture" id=12]
+[ext_resource path="res://UI/pressed_left.png" type="Texture" id=13]
+[ext_resource path="res://UI/pressed_up.png" type="Texture" id=14]
+[ext_resource path="res://UI/pressed_right.png" type="Texture" id=15]
+[ext_resource path="res://UI/shoot_active.png" type="Texture" id=16]
+[ext_resource path="res://UI/shoot_pressed.png" type="Texture" id=17]
+[ext_resource path="res://UI/refill_pressed.png" type="Texture" id=18]
+[ext_resource path="res://UI/refill_active.png" type="Texture" id=19]
+[ext_resource path="res://UI/PauseMenu.tscn" type="PackedScene" id=20]
+[ext_resource path="res://UI/Icon13.png" type="Texture" id=21]
+[ext_resource path="res://UI/Icon06.png" type="Texture" id=22]
+[ext_resource path="res://UI/Slime_icon.png" type="Texture" id=23]
+[ext_resource path="res://UI/tower_icon.png" type="Texture" id=24]
+[ext_resource path="res://UI/pin.png" type="Texture" id=25]
+[ext_resource path="res://UI/house_icon.png" type="Texture" id=26]
+[ext_resource path="res://UI/refill_disable.png" type="Texture" id=27]
+[ext_resource path="res://UI/Neusharp-Bold.otf" type="DynamicFontData" id=28]
+[ext_resource path="res://UI/Notably Absent DEMO.ttf" type="DynamicFontData" id=29]
+[ext_resource path="res://UI/Button24.png" type="Texture" id=30]
+[ext_resource path="res://UI/Button21.png" type="Texture" id=31]
+
+[sub_resource type="Animation" id=1]
+resource_name = "danger"
+length = 1.5
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Danger:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0.5, 1, 1.5 ),
+"transitions": PoolRealArray( 1, 4.59479, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Refill:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Danger:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+
+[sub_resource type="Animation" id=2]
+resource_name = "normal"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("Danger:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Refill:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+
+[sub_resource type="Animation" id=3]
+length = 2.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Refill:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Danger:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Refill:rect_rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 1, 2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ 0.0, -180.0, -360.0 ]
+}
+
+[sub_resource type="DynamicFont" id=4]
+size = 50
+use_filter = true
+font_data = ExtResource( 29 )
+
+[sub_resource type="DynamicFont" id=5]
+size = 49
+use_filter = true
+font_data = ExtResource( 28 )
+
+[sub_resource type="DynamicFont" id=6]
+size = 30
+font_data = ExtResource( 29 )
+
+[node name="GUI" type="CanvasLayer"]
+script = ExtResource( 4 )
+
+[node name="Water_Bar" parent="." instance=ExtResource( 5 )]
+margin_left = 56.3642
+margin_top = 36.4596
+margin_right = 330.364
+margin_bottom = 61.4596
+rect_scale = Vector2( 0.999834, 0.638249 )
+
+[node name="HP_Bar" parent="." instance=ExtResource( 3 )]
+margin_left = 56.6494
+margin_top = 10.2703
+margin_right = 330.65
+margin_bottom = 50.2703
+rect_scale = Vector2( 0.997359, 1.08682 )
+
+[node name="TextureRect" type="TextureRect" parent="."]
+margin_left = 6.35678
+margin_top = 3.70812
+margin_right = 583.357
+margin_bottom = 584.708
+rect_scale = Vector2( 0.109332, 0.109332 )
+texture = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="TextureRect"]
+margin_left = 101.748
+margin_top = 135.664
+margin_right = 293.748
+margin_bottom = 264.664
+rect_scale = Vector2( 1.89387, 1.89387 )
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Danger" type="TextureRect" parent="."]
+visible = false
+self_modulate = Color( 1, 1, 1, 0.0082912 )
+margin_left = 344.753
+margin_top = 13.6828
+margin_right = 788.753
+margin_bottom = 411.683
+rect_scale = Vector2( 0.0921313, 0.0921313 )
+texture = ExtResource( 7 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Refill" type="TextureRect" parent="."]
+margin_left = 110.228
+margin_top = -193.311
+margin_right = 610.228
+margin_bottom = 264.689
+rect_scale = Vector2( 0.079206, 0.0793269 )
+rect_pivot_offset = Vector2( 255.697, 226.758 )
+texture = ExtResource( 6 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+autoplay = "normal"
+anims/danger = SubResource( 1 )
+anims/normal = SubResource( 2 )
+anims/refill = SubResource( 3 )
+
+[node name="point" type="Panel" parent="."]
+margin_left = 7.34162
+margin_top = 79.423
+margin_right = 47.3416
+margin_bottom = 119.423
+rect_scale = Vector2( 3.29388, 1.03952 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="point"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 2.0
+rect_scale = Vector2( 0.388254, 1.06238 )
+text = "POINT : "
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="value" type="Label" parent="point"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 21.0
+margin_right = 16.0
+rect_scale = Vector2( 0.512773, 1.06055 )
+text = "0"
+align = 2
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Pause_btn" type="TextureButton" parent="."]
+margin_left = 1140.05
+margin_top = 15.0764
+margin_right = 1244.05
+margin_bottom = 105.076
+rect_scale = Vector2( 1.1111, 1.1111 )
+texture_normal = ExtResource( 22 )
+texture_pressed = ExtResource( 21 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="touchscreen" type="Node2D" parent="."]
+position = Vector2( 0, 490.213 )
+scale = Vector2( 1.427, 1.427 )
+
+[node name="Splash" type="TouchScreenButton" parent="touchscreen"]
+position = Vector2( 746.809, 16.018 )
+scale = Vector2( 1.05911, 1.05911 )
+normal = ExtResource( 16 )
+pressed = ExtResource( 17 )
+action = "tembak"
+
+[node name="Refill" type="TouchScreenButton" parent="touchscreen"]
+position = Vector2( 662.046, 63.4049 )
+scale = Vector2( 0.560975, 0.560975 )
+normal = ExtResource( 19 )
+pressed = ExtResource( 18 )
+action = "refill"
+
+[node name="normal" type="TextureRect" parent="touchscreen/Refill"]
+visible = false
+margin_left = -0.626953
+margin_top = -1.01276
+margin_right = 99.373
+margin_bottom = 98.9872
+texture = ExtResource( 19 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="pressed" type="TextureRect" parent="touchscreen/Refill"]
+visible = false
+margin_left = -0.626953
+margin_top = -1.01276
+margin_right = 99.373
+margin_bottom = 98.9872
+texture = ExtResource( 18 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="disable" type="TextureRect" parent="touchscreen/Refill"]
+visible = false
+margin_left = -0.626953
+margin_top = -1.01276
+margin_right = 99.373
+margin_bottom = 98.9872
+texture = ExtResource( 27 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Up" type="TouchScreenButton" parent="touchscreen"]
+self_modulate = Color( 1, 1, 1, 0.713726 )
+position = Vector2( 106.651, -80.4653 )
+scale = Vector2( 0.5, 0.5 )
+normal = ExtResource( 8 )
+pressed = ExtResource( 14 )
+passby_press = true
+action = "ui_up"
+
+[node name="Down" type="TouchScreenButton" parent="touchscreen"]
+self_modulate = Color( 1, 1, 1, 0.713726 )
+position = Vector2( 106.651, 36.4275 )
+scale = Vector2( 0.5, 0.5 )
+normal = ExtResource( 9 )
+pressed = ExtResource( 12 )
+passby_press = true
+action = "ui_down"
+
+[node name="Right" type="TouchScreenButton" parent="touchscreen"]
+self_modulate = Color( 1, 1, 1, 0.713726 )
+position = Vector2( 164.095, -8.70801 )
+scale = Vector2( 0.5, 0.5 )
+normal = ExtResource( 11 )
+pressed = ExtResource( 15 )
+passby_press = true
+action = "ui_right"
+
+[node name="Left" type="TouchScreenButton" parent="touchscreen"]
+self_modulate = Color( 1, 1, 1, 0.713726 )
+position = Vector2( 24.9315, -8.70834 )
+scale = Vector2( 0.5, 0.5 )
+normal = ExtResource( 10 )
+pressed = ExtResource( 13 )
+passby_press = true
+action = "ui_left"
+
+[node name="slime_icon" type="TextureRect" parent="."]
+margin_left = 141.081
+margin_top = 62.3573
+margin_right = 173.081
+margin_bottom = 94.3573
+rect_scale = Vector2( 2.35661, 2.30498 )
+texture = ExtResource( 23 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="pin" type="TextureRect" parent="slime_icon"]
+margin_left = 17.7717
+margin_top = 3.42525
+margin_right = 57.7717
+margin_bottom = 43.4252
+rect_scale = Vector2( 0.360199, 0.360199 )
+texture = ExtResource( 25 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="jml" type="Label" parent="slime_icon/pin"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -13.7253
+margin_top = -16.9783
+margin_right = -4.72528
+margin_bottom = -2.97829
+rect_scale = Vector2( 2.04161, 2.04161 )
+text = "4"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="house_icon" type="TextureRect" parent="."]
+margin_left = 228.357
+margin_top = 75.6604
+margin_right = 324.357
+margin_bottom = 203.66
+rect_scale = Vector2( 0.331189, 0.320829 )
+texture = ExtResource( 26 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="pin" type="TextureRect" parent="house_icon"]
+margin_left = 63.0466
+margin_top = -15.2502
+margin_right = 103.047
+margin_bottom = 24.7498
+rect_scale = Vector2( 2.50909, 2.50909 )
+texture = ExtResource( 25 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="jml" type="Label" parent="house_icon/pin"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -13.7253
+margin_top = -16.9783
+margin_right = -4.72528
+margin_bottom = -2.97829
+rect_scale = Vector2( 2.04161, 2.04161 )
+text = "4"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="tower_icon" type="TextureRect" parent="."]
+margin_left = 290.224
+margin_top = 74.2373
+margin_right = 392.224
+margin_bottom = 266.237
+rect_scale = Vector2( 0.237036, 0.237036 )
+texture = ExtResource( 24 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="pin" type="TextureRect" parent="tower_icon"]
+margin_left = 61.0554
+margin_top = -14.6373
+margin_right = 101.055
+margin_bottom = 25.3627
+rect_scale = Vector2( 3.71419, 3.71419 )
+texture = ExtResource( 25 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="jml" type="Label" parent="tower_icon/pin"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -13.7253
+margin_top = -16.9783
+margin_right = -4.72528
+margin_bottom = -2.97829
+rect_scale = Vector2( 2.04161, 2.04161 )
+text = "4"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="spawn_alert" type="Label" parent="."]
+margin_left = 476.417
+margin_top = 5.82469
+margin_right = 592.417
+margin_bottom = 19.8247
+custom_fonts/font = SubResource( 4 )
+text = "SLIME SPAWN IN :"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="second" type="Label" parent="spawn_alert"]
+margin_left = 105.614
+margin_top = 50.0724
+margin_right = 162.614
+margin_bottom = 100.072
+rect_scale = Vector2( 2.07456, 2.07456 )
+custom_fonts/font = SubResource( 5 )
+text = "10"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+margin_left = 426.0
+margin_top = 395.776
+margin_right = 896.0
+margin_bottom = 702.776
+size_flags_horizontal = 5
+size_flags_vertical = 8
+custom_constants/separation = -5
+alignment = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="head" type="Panel" parent="VBoxContainer"]
+margin_top = 82.0
+margin_right = 470.0
+margin_bottom = 112.0
+rect_min_size = Vector2( 0, 30 )
+size_flags_vertical = 8
+
+[node name="Mission" type="Label" parent="VBoxContainer/head"]
+margin_left = 196.926
+margin_top = 9.0
+margin_right = 246.926
+margin_bottom = 23.0
+rect_scale = Vector2( 1.5, 1.5 )
+text = "Mission"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="mission" type="TextureButton" parent="VBoxContainer/head"]
+modulate = Color( 1, 1, 1, 0.819608 )
+margin_left = 360.801
+margin_top = -6.62762
+margin_right = 530.801
+margin_bottom = 80.3724
+rect_scale = Vector2( 0.6, 0.5 )
+size_flags_horizontal = 8
+size_flags_vertical = 9
+toggle_mode = true
+texture_normal = ExtResource( 30 )
+texture_pressed = ExtResource( 31 )
+texture_hover = ExtResource( 31 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="VBoxContainer/head/mission"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_fonts/font = SubResource( 6 )
+text = "HIDE"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="bottom" type="Panel" parent="VBoxContainer"]
+modulate = Color( 1, 1, 1, 0.717647 )
+margin_top = 107.0
+margin_right = 470.0
+margin_bottom = 307.0
+rect_min_size = Vector2( 0, 200 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ScrollContainer" type="ScrollContainer" parent="VBoxContainer/bottom"]
+margin_left = 6.0
+margin_top = 10.0
+margin_right = 312.0
+margin_bottom = 132.0
+grow_horizontal = 0
+grow_vertical = 0
+rect_scale = Vector2( 1.5, 1.5 )
+follow_focus = true
+scroll_horizontal_enabled = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="List" type="VBoxContainer" parent="VBoxContainer/bottom/ScrollContainer"]
+custom_constants/separation = 5
+alignment = 1
+
+[node name="PauseMenu" parent="." instance=ExtResource( 20 )]
+pause_mode = 2
+visible = false
+margin_left = 4.48987
+margin_top = 0.819489
+margin_right = 4.48987
+margin_bottom = 0.819489
+
+[connection signal="toggled" from="VBoxContainer/head/mission" to="." method="_on_mission_toggled"]

@@ -1,0 +1,38 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://UI/mission_panel.gd" type="Script" id=1]
+
+[sub_resource type="StyleBoxLine" id=1]
+color = Color( 0, 0, 0, 0.403922 )
+
+[node name="mission" type="VBoxContainer"]
+anchor_right = 0.105
+anchor_bottom = 0.062
+margin_right = -0.400009
+margin_bottom = 0.359997
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="."]
+margin_right = 290.0
+margin_bottom = 14.0
+grow_horizontal = 0
+grow_vertical = 0
+rect_min_size = Vector2( 290, 0 )
+text = "Padamkan api semua tower!"
+valign = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Panel" type="Panel" parent="."]
+margin_top = 18.0
+margin_right = 290.0
+margin_bottom = 18.0
+custom_styles/panel = SubResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}

@@ -1,0 +1,118 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://UI/Button11.png" type="Texture" id=1]
+[ext_resource path="res://UI/Button15.png" type="Texture" id=2]
+[ext_resource path="res://UI/Button13.png" type="Texture" id=3]
+[ext_resource path="res://UI/PauseMenu.gd" type="Script" id=4]
+[ext_resource path="res://UI/Notably Absent DEMO.ttf" type="DynamicFontData" id=5]
+
+[sub_resource type="DynamicFont" id=1]
+size = 100
+font_data = ExtResource( 5 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 32
+use_filter = true
+font_data = ExtResource( 5 )
+
+[node name="PauseMenu" type="Control"]
+script = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+rect_scale = Vector2( 32.0196, 18.0279 )
+color = Color( 0.141176, 0.141176, 0.141176, 0.6 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="."]
+margin_left = 470.171
+margin_top = 163.79
+margin_right = 792.171
+margin_bottom = 256.79
+custom_fonts/font = SubResource( 1 )
+text = "PAUSED"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = 402.546
+margin_top = 269.851
+margin_right = 710.546
+margin_bottom = 449.851
+grow_horizontal = 2
+grow_vertical = 2
+rect_scale = Vector2( 1.45609, 1.4569 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer"]
+margin_right = 308.0
+margin_bottom = 180.0
+grow_horizontal = 2
+grow_vertical = 2
+custom_constants/separation = 6
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="resume_btn" type="TextureButton" parent="CenterContainer/VBoxContainer"]
+margin_right = 308.0
+margin_bottom = 87.0
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = ExtResource( 3 )
+texture_pressed = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="CenterContainer/VBoxContainer/resume_btn"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_fonts/font = SubResource( 2 )
+text = "RESUME"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="back_btn" type="TextureButton" parent="CenterContainer/VBoxContainer"]
+pause_mode = 2
+margin_top = 93.0
+margin_right = 308.0
+margin_bottom = 180.0
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = ExtResource( 2 )
+texture_pressed = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="CenterContainer/VBoxContainer/back_btn"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_fonts/font = SubResource( 2 )
+text = "MAIN MENU"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="pressed" from="CenterContainer/VBoxContainer/resume_btn" to="." method="_on_resume_btn_pressed"]
+[connection signal="pressed" from="CenterContainer/VBoxContainer/back_btn" to="." method="_on_back_btn_pressed"]
